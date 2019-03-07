@@ -1,4 +1,63 @@
 $(document).ready( function() {
+  var count = 0
+  $('#surprise').on('click', function() {
+    if (count % 2 === 0) {
+      $('#surprise').text('Welcome to the Rock, Paper mario, and Edward Scissor-Hands')
+      $('#rocky').unbind('click')
+      $('#rocky')
+        .html('<img src="therock.png" />').on("click", function(){
+          var rock = "rock"
+          rps(rock)
+        });
+        $('#back').css({
+          'background-image': 'url("arena.jpg")',
+          'background-size': '100% 100%',
+          'background-repeat': 'none',
+
+          })
+      $('#papery').unbind('click')
+      $('#papery')
+        .html('<img src="paper2.png" />').on("click", function(){
+          var paper = "paper"
+          rps(paper)
+        });
+      $('#scissory').unbind('click')
+      $('#scissory')
+        .html('<img src="scissors2.png" />').on("click", function(){
+          var scissors = "scissors"
+          rps(scissors)
+        });
+          
+          count += 1 
+      } else if (count%2===1) {
+        $('#surprise').text('Welcome to Rock Paper Scissors')
+      $('#rocky').unbind('click')
+      $('#rocky').html('<img src="rock.png" id="rock" />').on("click", function(){
+        var rock = "rock"
+        rps(rock)
+      });
+      $('#papery').unbind('click')
+      $('#papery')
+        .html('<img src="paper.png" />').on("click", function(){
+          var paper = "paper"
+          rps(paper)
+        });
+      $('#scissory').unbind('click')
+      $('#scissory')
+        .html('<img src="scissors.png" />').on("click", function(){
+          var scissors = "scissors"
+          rps(scissors)
+        });
+      $('#back').css({
+        'background-image': 'none',
+        'background-size': '100% 100%',
+        'background-repeat': 'none',
+
+        })
+        count += 1 
+      };
+  })
+  
   var arrayrps = ['rock', 'paper', 'scissors']
   var wins = 0
   var losses = 0
@@ -8,6 +67,7 @@ $(document).ready( function() {
     var rock = "rock"
     rps(rock)
   });
+
   $("#paper").on("click", function(){
     var paper = "paper"
     rps(paper)
@@ -20,6 +80,13 @@ $(document).ready( function() {
   $("#restart").on("click", function(){
     $("#result").text("")
     $("#score").text("Wins: 0 Losses: 0 Ties: 0")
+    $("#paper").stop();
+    $("#paper").removeAttr('style');
+    if (count % 2 === 0){
+      count = 0
+    } else {
+      count = 1
+    }
   })
 
 function rps(choice) {
@@ -79,8 +146,6 @@ function winnerwinner(userChoice, computerChoice) {
       }
     }
   }
-
-
 
 
 });

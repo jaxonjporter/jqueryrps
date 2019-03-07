@@ -9,12 +9,3 @@ button {
   display: inline;
 }
 
-.win{
- background-color: green;
-}
-.lose{
-  background-color: red;
-}
-.tie{
-  background-color: yellow;
-}

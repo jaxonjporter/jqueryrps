@@ -10,25 +10,38 @@
 </head>
 <body class="container bg-dark">
   <div class="row">
-    <div class="col-8 offset-2 text-center bg-white mt-5">
-      <h1>Welcome to Rock Paper Scissors</h1>
+    <div class="col-12 text-center bg-white mt-5" id="back">
+      <h1 id="surprise">Welcome to Rock Paper Scissors</h1>
 
       <h3>Click on a picture to play</h3>
       <div class="centered">
-        <img src="rock.png" alt="Rock-Paper-Scissors" class="inline" id="rock"/>
-        <img src="paper.png" alt="paper" class="inline" id="paper" />
-        <img src="scissors.png" alt="scissors" class="inline" id="scissors" />
+        <div class="row">
+        <div id="rocky" class="col-4">
+          <img src="rock.png" alt="Rock-Paper-Scissors" class="inline" id="rock"/>
+        </div>
+        <div id="papery" class="col-4">
+          <img src="paper.png" alt="paper" class="inline" id="paper" />
+        </div>
+        <div id="scissory" class="col-4">
+          <img src="scissors.png" alt="scissors" class="inline" id="scissors" />
+        </div>
       </div>
 
-      <p id="result"></p>
-
+      
       
       <button class="btn btn-primary mb-2 ml-5" id="restart">New Game</button>
     </div>
+  </div>
+</div>
+  <div class="row">
     <div class="col-8 offset-2 text-center bg-white mt-2">
       <h3 id="score">Wins: 0 Losses: 0 Ties: 0</h3>
+      <p id="result"></p>
     </div>
   </div>
+  <div id="complete" class="col-8 offset-2 text-center mt-5">
+  </div>
+
 
 
 
