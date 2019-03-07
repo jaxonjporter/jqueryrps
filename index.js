@@ -107,7 +107,7 @@ function rps(choice) {
 
 function winnerwinner(userChoice, computerChoice) {
   if (userChoice === computerChoice){
-    $("#result").text("You both chose " + userChoice + " you tied.")
+    $("#result").text("You both chose " + userChoice + ". You tied.")
     ties += 1
     $("#score").text("Wins: "+ wins +" Losses: "+ losses + " Ties: " + ties)
 
@@ -117,19 +117,19 @@ function winnerwinner(userChoice, computerChoice) {
         if (computerChoice === "paper"){
           losses += 1
           $("#score").text("Wins: "+ wins +" Losses: "+ losses + " Ties: " + ties)
-          $("#result").text("The computer chose paper. You Lost!!")
+          $("#result").text("The computer chose paper. You lost!!")
         } else {
           wins +=1
-          $("#result").text("The computer chose scissors. You Won!!")
+          $("#result").text("The computer chose scissors. You won!!")
           $("#score").text("Wins: "+ wins +" Losses: "+ losses + " Ties: " + ties)}
         break;
       case "paper":
         if (computerChoice === "scissors"){
           losses += 1
           $("#score").text("Wins: "+ wins +" Losses: "+ losses + " Ties: " + ties)
-          $("#result").text("The computer chose scissors. You Lost!!")
+          $("#result").text("The computer chose scissors. You lost!!")
         } else {
-          $("#result").text("The computer chose rock. You Won!!")
+          $("#result").text("The computer chose rock. You won!!")
           wins += 1
           $("#score").text("Wins: "+ wins +" Losses: "+ losses + " Ties: " + ties)}
         break;
